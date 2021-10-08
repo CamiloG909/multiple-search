@@ -24,7 +24,7 @@ $strong-shadow: 0 9px 32px -1px rgba(0, 0, 0, 0.5)
 
 ::selection
 	color: white
-	background-color: $green
+	background-color:#ffffff52
 
 html
 	font-size: 10px
@@ -78,6 +78,26 @@ body
 	inline-size: 100%
 	border-radius: 10px
 	box-shadow: $strong-shadow
+	overflow: hidden
+	&__container
+		padding: 0 15px 15px
+		article
+			&:last-child
+				border-block-end: none
+	&__article
+		padding: 15px 10px
+		display: grid
+		grid-template-columns: repeat(7, 1fr)
+		gap: 0 10px
+		font-size: 1.5rem
+		border-block-start: 1px solid $borders
+		border-block-end: 1px solid $borders
+		&-title
+			@extend .section-results__article
+			padding: 10px 10px
+			font-weight: bold
+			border: none
+			border-block-end: 1px solid $borders
 
 .title-results-index
 	padding: 10px
