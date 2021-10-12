@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+$custom-black: #1B1B1B
+$borders: #686868
+$soft-gray: #4A4A4A
+$gray: #3B3B3B
+$dark-gray: #2B2B2B
+$soft-green: #75f0a0
+$green: #1CCC5B
+$dark-greeen: #117F38
+$soft-blue: #729cff
+$blue: #2D6BFF
+$dark-blue: #1F4AB2
+$soft-red: #ff6a6a
+$red: #e81111
+$dark-red: #AB0000
+$strong-shadow: 0 9px 32px -1px rgba(0, 0, 0, 0.5)
+
+*
+	margin: 0
+	padding: 0
+	font-family: 'Montserrat', sans-serif
+	box-sizing: border-box
+
+::selection
+	color: white
+	background-color:#ffffff52
+
+// Scroll
+::-webkit-scrollbar
+  -webkit-appearance: none
+
+::-webkit-scrollbar:vertical
+  inline-size: 7px
+
+::-webkit-scrollbar-button:increment,::-webkit-scrollbar-button
+  display: none
+
+::-webkit-scrollbar:horizontal
+  block-size: 10px
+
+::-webkit-scrollbar-thumb
+  background-color: #ffffff44
+  border-radius: 20px
+
+::-webkit-scrollbar-thumb:hover
+	background-color: #ffffff7b
+
+::-webkit-scrollbar-track
+	margin: 0 3px
+  border-radius: 10px
+
+html
+	font-size: 10px
+
+body
+	text-align: center
+	background-color: $custom-black
+
+.title-index
+	font-size: 6rem
+	line-height: 12rem
+	color: white
+
+.container-index
+	margin: 0 auto
+	padding: 10px 20px 20px
+	inline-size: 90%
+	max-inline-size: 1000px
+	color: white
+	border-radius: 10px
+	background-color: $gray
+	box-shadow: $strong-shadow
+
+.form-cars
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	gap: 10px 15px
+	font-size: 1.6rem
+	font-weight: bold
+	div
+		text-align: start
+		label
+			line-height: 4rem
+	&__select
+		padding: 10px
+		inline-size: 100%
+		font-size: 1.5rem
+		color: white
+		border-radius: 10px
+		border: 1px  solid $borders
+		background-color: $gray
+		transition: all 0.3s ease
+		outline: none
+		cursor: pointer
+		user-select: none
+		&:hover
+			border: 1px solid $green
+
+.section-results
+	margin-block-start: 20px
+	inline-size: 100%
+	border-radius: 10px
+	box-shadow: $strong-shadow
+	overflow: hidden
+	&__container
+		padding: 0 15px 15px
+		article
+			&:last-child
+				border-block-end: none
+	&__article
+		padding: 15px 10px
+		display: grid
+		grid-template-columns: repeat(7, 1fr)
+		gap: 0 10px
+		font-size: 1.5rem
+		border-block-start: 1px solid $borders
+		border-block-end: 1px solid $borders
+		&-title
+			@extend .section-results__article
+			padding: 10px 10px
+			font-weight: bold
+			border: none
+			border-block-end: 1px solid $borders
+
+.title-results-index
+	padding: 10px
+	font-size: 3.5rem
+	border-radius: 10px 10px 0 0
+	background-color: $green
+
+.no-results-text
+	padding: 15px 0
+	font-size: 2rem
